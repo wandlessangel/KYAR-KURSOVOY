@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ArciTech - Строительство домов и коттеджей</title>
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+					<img
+						src="assets/images/black-main-logo.png"
+						width="40"
+						height="40"
+						alt="ArciTech logo"
+					/>
+					<span>ArciTech</span>
+				</div>
+
+				<nav aria-label="Основная навигация">
+					<ul>
+						<li><a href="index.html" aria-current="page">Главная</a></li>
+						<li class="has-dropdown">
+							<a href="#our-services">Услуги</a>
+							<ul class="dropdown-menu">
+								<li><a href="pages/monolith.html">Монолитные работы</a></li>
+								<li><a href="pages/foundation.html">Фундаменты</a></li>
+							</ul>
+						</li>
+						<li class="quote-button">
+							<a href="pages/quote.html">Заявка на строительство</a>
+						</li>
+					</ul>
+				</nav>
+
+				<button
+					class="burger"
+					aria-label="Открыть меню"
+					aria-expanded="false"
+					aria-controls="nav"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" aria-labelledby="hero-title">
+				<div class="hero-content">
+					<h1 id="hero-title">
+						СТРОИТЕЛЬСТВО И <span>ПРОЕКТИРОВАНИЕ</span> ЧАСТНЫХ ДОМОВ И
+						КОТТЕДЖЕЙ ПОД КЛЮЧ В МИНСКЕ
+					</h1>
+					<p>
+						Мы создаем не просто дома, мы создаем пространство для вашей жизни.
+						Качество, надежность и индивидуальный подход к каждому проекту.
+					</p>
+					<div class="hero-buttons">
+						<a href="pages/quote.html" class="cta-button">
+							<span>Оставить заявку</span>
+							<span class="arrow">→</span>
+						</a>
+						<a href="#our-services" class="button--secondary">Наши услуги</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="stats-section">
+				<div class="container">
+					<div class="stats-grid">
+						<div class="stat-item">
+							<div class="stat-number">10+</div>
+							<div class="stat-label"><h2>Лет опыта</h2></div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-number">120+</div>
+							<div class="stat-label"><h2>Завершенных проектов</h2></div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-number">25</div>
+							<div class="stat-label"><h2>Профессионалов</h2></div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-number">98%</div>
+							<div class="stat-label">Довольных клиентов</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" aria-labelledby="about-title">
+				<div class="container">
+					<h2 id="about-title">О компании</h2>
+					<div id="about-content">
+						<p>
+							Компания «ArciTech» выполняет строительство домов и коттеджей под
+							ключ с гарантией на проведенные работы. Мы специализируемся на
+							монолитном домостроении и готовы решить задачи клиента любой
+							степени сложности.
+						</p>
+					</div>
+
+					<div class="about-grid">
+						<div class="about-image">
+							<img
+								src="assets/images/builder-background-image.jpg"
+								alt="Команда ArciTech на строительной площадке"
+							/>
+						</div>
+
+						<div class="about-content">
+							<h3>Почему выбирают нас</h3>
+							<p>
+								Компания «ArciTech» — это команда профессионалов с многолетним
+								опытом работы. Мы предлагаем полный комплекс услуг, от
+								проектирования до сдачи объекта "под ключ".
+							</p>
+
+							<div class="about-features">
+								<div class="feature">
+									<i class="fas fa-medal"></i>
+									<div class="feature-text">
+										<h4>Высокое качество</h4>
+										<p>
+											Мы используем только проверенные материалы и современные
+											технологии строительства.
+										</p>
+									</div>
+								</div>
+
+								<div class="feature">
+									<i class="fas fa-clock"></i>
+									<div class="feature-text">
+										<h4>Соблюдение сроков</h4>
+										<p>
+											Точное планирование и контроль каждого этапа строительства
+											объекта.
+										</p>
+									</div>
+								</div>
+
+								<div class="feature">
+									<i class="fas fa-shield-alt"></i>
+									<div class="feature-text">
+										<h4>Гарантия качества</h4>
+										<p>
+											Мы предоставляем гарантию на все виды выполненных работ.
+										</p>
+									</div>
+								</div>
+
+								<div class="feature">
+									<i class="fas fa-hand-holding-usd"></i>
+									<div class="feature-text">
+										<h4>Прозрачная цена</h4>
+										<p>
+											Понятное ценообразование без скрытых платежей и
+											неожиданных наценок.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<a href="#our-services" class="button"
+								>Узнать больше о наших услугах</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section
+				id="our-services"
+				class="services"
+				aria-labelledby="services-title"
+			>
+				<div class="services-text">
+					<h2 id="services-title" class="section-title">Наши услуги</h2>
+					<p class="section-desc">
+						Мы предлагаем полный комплекс услуг по проектированию и
+						строительству частных домов и коттеджей в Минске и Минской области.
+						Профессиональный подход и многолетний опыт гарантируют высокое
+						качество работ.
+					</p>
+				</div>
+
+				<div class="services-grid">
+					<div
+						class="service-box"
+						style="background-image: url('assets/images/photo1.jpg')"
+					>
+						<div class="service-content">
+							<div class="top-section">
+								<h3 class="service-title">Проектирование домов и коттеджей</h3>
+							</div>
+							<div class="middle-section">
+								<p class="service-desc">
+									Индивидуальное проектирование жилых домов с учетом всех
+									пожеланий заказчика. Современные архитектурные решения.
+								</p>
+							</div>
+							<div class="decorative-line"></div>
+						</div>
+					</div>
+					<div
+						class="service-box"
+						style="background-image: url('assets/images/photo2.jpg')"
+					>
+						<div class="service-content">
+							<div class="top-section">
+								<h3 class="service-title">Заливка фундаментов</h3>
+							</div>
+							<div class="middle-section">
+								<p class="service-desc">
+									Профессиональная заливка монолитных фундаментов любой
+									сложности. Точные расчеты, качественные материалы.
+								</p>
+							</div>
+							<div class="decorative-line"></div>
+							<div class="bottom-section">
+								<a href="pages/foundation.html" class="service-link"
+									>Подробнее</a
+								>
+							</div>
+						</div>
+					</div>
+					<div
+						class="service-box"
+						style="background-image: url('assets/images/photo3.jpg')"
+					>
+						<div class="service-content">
+							<div class="top-section">
+								<h3 class="service-title">Монолитные работы</h3>
+							</div>
+							<div class="middle-section">
+								<p class="service-desc">
+									Выполняем полный комплекс монолитных работ: возведение стен,
+									перекрытий, колонн и лестниц.
+								</p>
+							</div>
+							<div class="decorative-line"></div>
+							<div class="bottom-section">
+								<a href="pages/monolith.html" class="service-link">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div
+						class="service-box"
+						style="background-image: url('assets/images/photo4.avif')"
+					>
+						<div class="service-content">
+							<div class="top-section">
+								<h3 class="service-title">Строительство домов</h3>
+							</div>
+							<div class="middle-section">
+								<p class="service-desc">
+									Комплексное строительство частных домов и коттеджей под ключ.
+									От проектирования до финальной отделки.
+								</p>
+							</div>
+							<div class="decorative-line"></div>
+							<div class="bottom-section"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="process-section">
+				<div class="container">
+					<h2 class="section-title">Как мы работаем</h2>
+
+					<div class="process-steps">
+						<div class="step">
+							<div class="step-number">1</div>
+							<div class="step-icon">
+								<img src="assets/images/zametka.png" alt="Консультация" />
+							</div>
+							<h3 class="step-title">Консультация</h3>
+							<p class="step-desc">
+								Бесплатная консультация с нашими специалистами, анализ ваших
+								требований
+							</p>
+						</div>
+
+						<div class="step">
+							<div class="step-number">2</div>
+							<div class="step-icon">
+								<img src="assets/images/zametka.png" alt="Проектирование" />
+							</div>
+							<h3 class="step-title">Проектирование</h3>
+							<p class="step-desc">
+								Разработка индивидуального проекта согласно вашим пожеланиям
+							</p>
+						</div>
+
+						<div class="step">
+							<div class="step-number">3</div>
+							<div class="step-icon">
+								<img src="assets/images/zametka.png" alt="Строительство" />
+							</div>
+							<h3 class="step-title">Строительство</h3>
+							<p class="step-desc">
+								Реализация проекта с соблюдением всех технологий и норм
+							</p>
+						</div>
+
+						<div class="step">
+							<div class="step-number">4</div>
+							<div class="step-icon">
+								<img src="assets/images/zametka.png" alt="Сдача объекта" />
+							</div>
+							<h3 class="step-title">Сдача объекта</h3>
+							<p class="step-desc">
+								Финальная проверка и передача готового дома заказчику
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="quote-slider" aria-label="Цитаты">
+				<button class="chevron left" aria-label="Предыдущая цитата">
+					<svg
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M15 18L9 12L15 6"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+
+				<div class="quote-text">
+					<p>
+						Качество наших работ – это наша репутация, которую мы не собираемся
+						терять. За нами не нужно переделывать работу. Убедитесь в этом сами!
+					</p>
+				</div>
+
+				<button class="chevron right" aria-label="Следующая цитата">
+					<svg
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M9 6L15 12L9 18"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+			</section>
+		</main>
+
+		<footer>
+			<div class="footer-content">
+				<div class="footer-about">
+					<div class="footer-brand">
+						<img
+							src="assets/images/white-main-logo.png"
+							width="40"
+							height="40"
+							class="footer-logo"
+							alt="ArciTech logo"
+						/>
+						<span class="footer-name">ArciTech</span>
+					</div>
+
+					<p>
+						Компания «ArciTech» специализируется на проектировании и
+						строительстве частных домов и коттеджей под ключ в Минске. Мы
+						обеспечиваем высокое качество работ и индивидуальный подход к
+						каждому клиенту.
+					</p>
+
+					<ul class="footer-info">
+						<li>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle
+									cx="12"
+									cy="12"
+									r="10"
+									stroke="white"
+									stroke-width="2"
+								/>
+								<path
+									d="M12 6V12L16 14"
+									stroke="white"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+							</svg>
+							<span>Пн – Сб: 09:00 – 21:00</span>
+						</li>
+						<li>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+									stroke="white"
+									stroke-width="2"
+								/>
+								<path d="M22 6L12 13L2 6" stroke="white" stroke-width="2" />
+							</svg>
+							<a href="mailto:info@architech.by">info@architech.by</a>
+						</li>
+						<li>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+									stroke="white"
+									stroke-width="2"
+								/>
+								<circle cx="12" cy="10" r="3" stroke="white" stroke-width="2" />
+							</svg>
+							<span>г. Минск</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-nav">
+					<h4>Навигация</h4>
+					<ul>
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#our-services">Услуги</a></li>
+						<li><a href="pages/quote.html">Заявка на строительство</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-services">
+					<h4>Услуги</h4>
+					<ul>
+						<li><a href="#">Проектирование</a></li>
+						<li><a href="pages/foundation.html">Фундаменты</a></li>
+						<li><a href="pages/monolith.html">Монолитные работы</a></li>
+						<li><a href="#">Строительство домов</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-social">
+					<h4>Мы в соцсетях</h4>
+					<div class="social-links">
+						<a href="#" aria-label="Мы ВКонтакте">
+							<img src="assets/images/logo-vk.png" alt="ВКонтакте" />
+						</a>
+						<a href="#" aria-label="Мы в Telegram">
+							<img src="assets/images/logo-telegram.png" alt="Telegram" />
+						</a>
+						<a href="#" aria-label="Мы в Instagram">
+							<img src="assets/images/logo-instagram.png" alt="Instagram" />
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="copyright">
+					&copy; 2023 ArciTech. Все права защищены.
+					<a href="#">Политика конфиденциальности</a>
+				</div>
+
+				<div class="footer-links">
+					<a href="#">Условия использования</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/content-loader.js"></script>
+	</body>
+</html>

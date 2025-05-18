@@ -1,0 +1,195 @@
+footer {
+	background-color: $footer-bg-color;
+	color: $secondary-color;
+	padding: $spacing-xl 0 $spacing-md;
+
+	.footer-content {
+		@include container;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: $spacing-xl;
+		margin-bottom: $spacing-xl;
+
+		@include respond-to(lg) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: $spacing-lg;
+		}
+
+		@include respond-to(sm) {
+			grid-template-columns: 1fr;
+			gap: $spacing-xl;
+		}
+	}
+
+	.footer-about {
+		grid-column: span 1;
+
+		@include respond-to(lg) {
+			grid-column: span 2;
+		}
+
+		@include respond-to(sm) {
+			grid-column: span 1;
+		}
+
+		.footer-brand {
+			@include flex(row, flex-start, center);
+			gap: $spacing-sm;
+			margin-bottom: $spacing-md;
+
+			.footer-logo {
+				width: 40px;
+				height: auto;
+			}
+
+			.footer-name {
+				font-size: $font-size-lg;
+				font-weight: $font-weight-medium;
+			}
+		}
+
+		p {
+			margin-bottom: $spacing-md;
+			color: rgba($secondary-color, 0.8);
+			line-height: 1.6;
+		}
+
+		.footer-info {
+			li {
+				@include flex(row, flex-start, center);
+				gap: $spacing-sm;
+				margin-bottom: $spacing-sm;
+				color: rgba($secondary-color, 0.8);
+
+				svg {
+					min-width: 20px;
+					height: 20px;
+					color: $accent-color-1;
+				}
+
+				a {
+					color: rgba($secondary-color, 0.8);
+					@include transition;
+
+					&:hover {
+						color: $accent-color-1;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-nav {
+		h4 {
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+			margin-bottom: $spacing-md;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: $secondary-color;
+		}
+
+		ul {
+			li {
+				margin-bottom: $spacing-sm;
+
+				a {
+					color: rgba($secondary-color, 0.8);
+					font-size: $font-size-sm;
+					@include transition;
+					display: inline-block;
+
+					&:hover {
+						color: $accent-color-1;
+						padding-left: $spacing-xs;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-services {
+		@extend .footer-nav;
+	}
+
+	.footer-social {
+		h4 {
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+			margin-bottom: $spacing-md;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: $secondary-color;
+		}
+
+		.social-links {
+			@include flex(row, flex-start, center);
+			gap: $spacing-md;
+			flex-wrap: wrap;
+			margin-bottom: $spacing-lg;
+
+			a {
+				display: block;
+				width: 40px;
+				height: 40px;
+				background-color: rgba($secondary-color, 0.1);
+				border-radius: $border-radius-md;
+				@include transition;
+				@include flex(row, center, center);
+
+				svg,
+				img {
+					width: 20px;
+					height: 20px;
+				}
+
+				&:hover {
+					transform: translateY(-3px);
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		@include container;
+		padding-top: $spacing-md;
+		border-top: 1px solid rgba($secondary-color, 0.1);
+		@include flex(row, space-between, center);
+		font-size: $font-size-sm;
+
+		@include respond-to(sm) {
+			flex-direction: column;
+			gap: $spacing-md;
+			text-align: center;
+		}
+
+		.copyright {
+			color: rgba($secondary-color, 0.6);
+
+			a {
+				color: rgba($secondary-color, 0.6);
+				margin-left: $spacing-sm;
+				@include transition;
+
+				&:hover {
+					color: $accent-color-1;
+				}
+			}
+		}
+
+		.footer-links {
+			a {
+				color: rgba($secondary-color, 0.6);
+				@include transition;
+
+				&:hover {
+					color: $accent-color-1;
+				}
+
+				&:not(:last-child) {
+					margin-right: $spacing-md;
+				}
+			}
+		}
+	}
+}
