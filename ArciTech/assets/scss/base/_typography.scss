@@ -1,15 +1,26 @@
-/* Стили типографики */
-
-/* Выравнивание текста */
-p, li, span, div, section, article, main, td, th, blockquote, figcaption {
-  text-align: left;
-  hyphens: none;
+p,
+li,
+span,
+div,
+section,
+article,
+main,
+td,
+th,
+blockquote,
+figcaption {
+	text-align: left;
+	hyphens: none;
 }
 
-/* Сохранение выравнивания для определенных элементов */
-.logo span, 
+.logo span,
 .nav a,
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .button,
 .cta-button,
 .footer-brand,
@@ -19,32 +30,29 @@ h1, h2, h3, h4, h5, h6,
 .social-links,
 header nav,
 .dropdown-menu a {
-  text-align: left;
+	text-align: left;
 }
 
-/* Центрированные элементы */
 .section-title,
 .text-center,
 .services-text h2,
 .process-section h2,
 .quote-slider {
-  text-align: center !important;
+	text-align: center !important;
 }
 
-/* Элементы с выравниванием по правому краю */
 .text-right {
-  text-align: right !important;
+	text-align: right !important;
 }
 
-/* Толщина шрифта */
 .text-bold {
-  font-weight: $font-weight-bold;
+	font-weight: $font-weight-bold;
 }
 
 .text-medium {
-  font-weight: $font-weight-medium;
+	font-weight: $font-weight-medium;
 }
 
 .text-normal {
-  font-weight: $font-weight-normal;
-} 
+	font-weight: $font-weight-normal;
+}
