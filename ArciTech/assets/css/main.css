@@ -387,12 +387,6 @@ header nav .quote-button a {
 	font-weight: 500;
 	text-align: center;
 }
-header nav .quote-button a:before {
-	content: '\f007';
-	font-family: 'Font Awesome 6 Free';
-	margin-right: 8px;
-	font-size: 16px;
-}
 header nav .quote-button a:hover {
 	background-color: #cc5600;
 	color: #ffffff !important;
