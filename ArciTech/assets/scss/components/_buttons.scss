@@ -1,0 +1,257 @@
+%button-base {
+	display: inline-block;
+	font-family: $font-primary;
+	font-weight: $font-weight-medium;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	@include transition;
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+}
+
+.button,
+.cta-button {
+	@extend %button-base;
+	background-color: $accent-color-1;
+	color: $primary-color;
+	padding: $spacing-sm $spacing-xl;
+	border-radius: $border-radius-md;
+	font-size: $font-size-base;
+	box-shadow: $shadow-sm;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	@include respond-to(sm) {
+		padding: $spacing-xs $spacing-lg;
+		font-size: $font-size-sm;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $accent-color-2;
+		z-index: -1;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+	}
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: $shadow-md;
+
+		&::after {
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+	}
+
+	&:active {
+		transform: translateY(0);
+		box-shadow: $shadow-sm;
+	}
+}
+
+.cta-button {
+	@include flex(row, center, center);
+	gap: $spacing-md;
+	padding: $spacing-md $spacing-xl;
+	font-size: $font-size-lg;
+
+	@include respond-to(sm) {
+		padding: $spacing-sm $spacing-lg;
+		font-size: $font-size-base;
+		gap: $spacing-sm;
+	}
+
+	.arrow {
+		display: inline-block;
+		transition: transform $transition-medium;
+	}
+
+	&:hover {
+		.arrow {
+			transform: translateX(5px);
+		}
+	}
+}
+
+.button--secondary {
+	@extend %button-base;
+	background-color: transparent;
+	color: $accent-color-1;
+	border: 1px solid $accent-color-1;
+	padding: $spacing-sm $spacing-xl;
+	border-radius: $border-radius-md;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	@include respond-to(sm) {
+		padding: $spacing-xs $spacing-lg;
+		font-size: $font-size-sm;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($accent-color-1, 0.1);
+		z-index: -1;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+	}
+
+	&:hover {
+		color: $accent-color-2;
+		transform: translateY(-2px);
+
+		&::after {
+			transform: scaleY(1);
+			transform-origin: top;
+		}
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+.button--tertiary {
+	@extend %button-base;
+	background-color: transparent;
+	color: $text-color;
+	padding: $spacing-sm $spacing-md;
+	text-decoration: none;
+	position: relative;
+
+	@include respond-to(sm) {
+		padding: $spacing-xs $spacing-sm;
+		font-size: $font-size-sm;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: $accent-color-1;
+		@include transition;
+	}
+
+	&:hover {
+		color: $accent-color-1;
+
+		&::after {
+			width: 100%;
+		}
+	}
+}
+
+.button--small {
+	padding: $spacing-xs $spacing-md;
+	font-size: $font-size-sm;
+
+	@include respond-to(sm) {
+		padding: $spacing-xxs $spacing-sm;
+		font-size: $font-size-sm;
+	}
+}
+
+.button--large {
+	padding: $spacing-md $spacing-xl;
+	font-size: $font-size-lg;
+
+	@include respond-to(sm) {
+		padding: $spacing-sm $spacing-lg;
+		font-size: $font-size-base;
+	}
+}
+
+.button--icon {
+	@include flex(row, center, center);
+	gap: $spacing-xs;
+
+	svg,
+	img {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.button--full {
+	width: 100%;
+	display: block;
+}
+
+form button[type='submit'] {
+	@extend .button;
+	width: 100%;
+	margin-top: $spacing-md;
+	background-color: $accent-color-1;
+	color: $primary-color;
+
+	&:hover {
+		background-color: $accent-color-2;
+	}
+}
+
+.floating-cta {
+	position: fixed;
+	right: $spacing-lg;
+	bottom: $spacing-lg;
+	z-index: $z-index-fixed;
+
+	@include respond-to(sm) {
+		right: $spacing-md;
+		bottom: $spacing-md;
+	}
+
+	.button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: $accent-color-1;
+		box-shadow: $shadow-lg;
+		@include transition;
+
+		@include respond-to(sm) {
+			width: 50px;
+			height: 50px;
+		}
+
+		svg,
+		img {
+			width: 24px;
+			height: 24px;
+
+			@include respond-to(sm) {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		&:hover {
+			transform: translateY(-5px) scale(1.05);
+		}
+	}
+}

@@ -1,0 +1,531 @@
+.page-banner {
+	background-color: $accent-color-2;
+	color: $secondary-color;
+	padding: $spacing-xl 0;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: linear-gradient(to right, $accent-color-3, $accent-color-1);
+	}
+
+	.container {
+		@include container;
+
+		@include respond-to(sm) {
+			padding: 0 $spacing-md;
+		}
+	}
+
+	h1 {
+		font-size: $font-size-xxl;
+		font-weight: $font-weight-bold;
+		margin-bottom: $spacing-md;
+		position: relative;
+		display: inline-block;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background-color: $accent-color-3;
+		}
+
+		@include respond-to(md) {
+			font-size: $font-size-xl;
+		}
+
+		@include respond-to(sm) {
+			font-size: $font-size-lg;
+		}
+	}
+
+	.breadcrumbs {
+		font-size: $font-size-sm;
+		color: $accent-color-3;
+		margin-top: $spacing-md;
+
+		a {
+			color: $secondary-color;
+			@include transition;
+
+			&:hover {
+				color: $accent-color-3;
+			}
+		}
+	}
+}
+
+.quote-section {
+	padding: $spacing-xxl 0;
+	background-color: $background-color-light;
+	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		background-color: rgba($accent-color-1, 0.05);
+		border-radius: 50%;
+		z-index: 0;
+	}
+
+	&::before {
+		width: 400px;
+		height: 400px;
+		top: -100px;
+		left: -150px;
+	}
+
+	&::after {
+		width: 500px;
+		height: 500px;
+		bottom: -200px;
+		right: -200px;
+	}
+
+	@include respond-to(sm) {
+		padding: $spacing-lg 0;
+	}
+
+	.container {
+		@include container;
+		position: relative;
+		z-index: 1;
+	}
+
+	.quote-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: $spacing-xl;
+
+		@include respond-to(md) {
+			grid-template-columns: 1fr;
+			gap: $spacing-lg;
+		}
+	}
+
+	.quote-text {
+		h2 {
+			font-size: $font-size-xl;
+			font-weight: $font-weight-bold;
+			margin-bottom: $spacing-lg;
+			color: $text-color-dark;
+			position: relative;
+			display: inline-block;
+
+			@include respond-to(sm) {
+				font-size: $font-size-lg;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -$spacing-sm;
+				left: 0;
+				width: 100px;
+				height: 3px;
+				background-color: $accent-color-1;
+			}
+		}
+
+		p {
+			font-size: $font-size-base;
+			line-height: 1.6;
+			margin-bottom: $spacing-lg;
+			color: $text-color;
+		}
+	}
+
+	.quote-benefits {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: $spacing-md;
+		margin-top: $spacing-lg;
+	}
+
+	.benefit-item {
+		@include flex(row, flex-start, flex-start);
+		gap: $spacing-md;
+		padding: $spacing-md;
+		background-color: $secondary-color;
+		border-radius: $border-radius-md;
+		box-shadow: $shadow-sm;
+		transition: all $transition-medium;
+		border-left: 3px solid $accent-color-1;
+
+		@include respond-to(sm) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			border-left: none;
+			border-top: 3px solid $accent-color-1;
+		}
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: $shadow-md;
+		}
+
+		.benefit-icon {
+			flex-shrink: 0;
+			width: 60px;
+			height: 60px;
+			background-color: rgba($accent-color-1, 0.1);
+			border-radius: 50%;
+			@include flex(row, center, center);
+			border: 2px dashed $accent-color-1;
+
+			img {
+				width: 32px;
+				height: 32px;
+				filter: invert(45%) sepia(95%) saturate(1127%) hue-rotate(360deg)
+					brightness(100%) contrast(100%);
+			}
+		}
+
+		.benefit-text {
+			h3 {
+				font-size: $font-size-lg;
+				font-weight: $font-weight-bold;
+				margin-bottom: $spacing-xs;
+				color: $text-color-dark;
+
+				@include respond-to(sm) {
+					font-size: $font-size-base;
+				}
+			}
+
+			p {
+				font-size: $font-size-base;
+				margin-bottom: 0;
+
+				@include respond-to(sm) {
+					font-size: $font-size-sm;
+				}
+			}
+		}
+	}
+
+	.quote-form {
+		background-color: $secondary-color;
+		border-radius: $border-radius-lg;
+		padding: $spacing-xl;
+		box-shadow: $shadow-lg;
+		position: relative;
+		border-top: 5px solid $accent-color-1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100px;
+			height: 100px;
+			background-color: rgba($accent-color-1, 0.1);
+			border-radius: 0 $border-radius-lg 0 $border-radius-lg;
+			z-index: 0;
+		}
+
+		@include respond-to(sm) {
+			padding: $spacing-lg;
+			border-radius: $border-radius-md;
+		}
+
+		h2 {
+			font-size: $font-size-xl;
+			font-weight: $font-weight-bold;
+			margin-bottom: $spacing-xl;
+			color: $text-color-dark;
+			text-align: center;
+			position: relative;
+
+			@include respond-to(sm) {
+				font-size: $font-size-lg;
+				margin-bottom: $spacing-lg;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -$spacing-sm;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100px;
+				height: 3px;
+				background-color: $accent-color-1;
+			}
+		}
+
+		.form-group {
+			margin-bottom: $spacing-md;
+			position: relative;
+			z-index: 1;
+
+			label {
+				display: block;
+				margin-bottom: $spacing-xxs;
+				font-weight: $font-weight-medium;
+				color: $text-color-dark;
+				font-size: $font-size-sm;
+			}
+
+			.form-control {
+				width: 100%;
+				padding: $spacing-sm $spacing-md;
+				border: 1px solid $border-color;
+				border-radius: $border-radius-sm;
+				transition: all $transition-medium;
+				background-color: rgba($secondary-color, 0.7);
+
+				&:focus {
+					border-color: $accent-color-1;
+					box-shadow: 0 0 0 3px rgba($accent-color-1, 0.2);
+					outline: none;
+				}
+
+				&.error {
+					border-color: $error-color;
+				}
+			}
+		}
+
+		.checkbox-group {
+			@include flex(row, flex-start, center);
+			gap: $spacing-sm;
+			margin-bottom: $spacing-md;
+			position: relative;
+			z-index: 1;
+
+			input[type='checkbox'] {
+				width: 20px;
+				height: 20px;
+				accent-color: $accent-color-1;
+			}
+
+			label {
+				font-size: $font-size-sm;
+				color: $text-color;
+			}
+
+			&.error {
+				label {
+					color: $error-color;
+				}
+			}
+		}
+
+		.form-note {
+			font-size: $font-size-xs;
+			color: $text-color-light;
+			margin-bottom: $spacing-lg;
+			position: relative;
+			z-index: 1;
+		}
+
+		button[type='submit'] {
+			width: 100%;
+			padding: $spacing-md;
+			background-color: $accent-color-1;
+			color: $secondary-color;
+			border: none;
+			border-radius: $border-radius-sm;
+			font-weight: $font-weight-bold;
+			cursor: pointer;
+			transition: all $transition-medium;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					rgba($secondary-color, 0.3),
+					transparent
+				);
+				transition: all 0.8s;
+				z-index: -1;
+			}
+
+			&:hover {
+				background-color: darken($accent-color-1, 10%);
+
+				&::before {
+					left: 100%;
+				}
+			}
+		}
+	}
+}
+
+.faq-section {
+	padding: $spacing-xxl 0;
+	background-color: $background-color;
+
+	@include respond-to(sm) {
+		padding: $spacing-lg 0;
+	}
+
+	.container {
+		@include container;
+	}
+
+	h2 {
+		font-size: $font-size-xl;
+		font-weight: $font-weight-bold;
+		margin-bottom: $spacing-xl;
+		color: $text-color-dark;
+		text-align: center;
+		position: relative;
+		display: inline-block;
+		margin-left: 50%;
+		transform: translateX(-50%);
+
+		@include respond-to(md) {
+			font-size: $font-size-lg;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -$spacing-sm;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100px;
+			height: 3px;
+			background-color: $accent-color-1;
+		}
+	}
+
+	.faq-items {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: $spacing-md;
+	}
+
+	.faq-item {
+		background-color: $secondary-color;
+		border-radius: $border-radius-md;
+		box-shadow: $shadow-sm;
+		overflow: hidden;
+		transition: all $transition-medium;
+		border-left: 3px solid $accent-color-1;
+
+		&:hover {
+			box-shadow: $shadow-md;
+		}
+	}
+
+	.faq-question {
+		@include flex(row, space-between, center);
+		padding: $spacing-md;
+		cursor: pointer;
+		transition: all $transition-medium;
+
+		h3 {
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+			color: $text-color-dark;
+			margin: 0;
+			transition: all $transition-medium;
+
+			@include respond-to(sm) {
+				font-size: $font-size-sm;
+			}
+		}
+
+		.toggle-btn {
+			width: 24px;
+			height: 24px;
+			background: transparent;
+			border: none;
+			position: relative;
+			cursor: pointer;
+			flex-shrink: 0;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 14px;
+				height: 2px;
+				background-color: $accent-color-1;
+				transition: all $transition-medium;
+			}
+
+			&::before {
+				transform: translate(-50%, -50%);
+			}
+
+			&::after {
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+
+			&.active::after {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+		}
+
+		&:hover {
+			background-color: rgba($accent-color-1, 0.05);
+
+			h3 {
+				color: $accent-color-1;
+			}
+		}
+
+		&.active {
+			background-color: rgba($accent-color-1, 0.1);
+
+			h3 {
+				color: $accent-color-1;
+			}
+		}
+	}
+
+	.faq-answer {
+		padding: 0 $spacing-md $spacing-md;
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: max-height $transition-medium, padding $transition-medium,
+			opacity $transition-medium;
+		transform: translateY(-10px);
+
+		p {
+			font-size: $font-size-base;
+			line-height: 1.6;
+			color: $text-color;
+			margin: 0;
+
+			@include respond-to(sm) {
+				font-size: $font-size-sm;
+			}
+		}
+
+		&.open {
+			max-height: 500px;
+			padding: 0 $spacing-md $spacing-md;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

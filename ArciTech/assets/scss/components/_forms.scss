@@ -1,0 +1,233 @@
+.form-container {
+	@include container;
+	@include flex(row, space-between, stretch);
+	gap: $spacing-xl;
+	margin: $spacing-xl auto;
+	background-color: $secondary-color;
+	border-radius: $border-radius-lg;
+	overflow: hidden;
+	box-shadow: $shadow-lg;
+
+	@include respond-to(md) {
+		flex-direction: column;
+	}
+}
+
+.form-left {
+	flex: 1;
+	padding: $spacing-xl;
+
+	h2 {
+		font-size: $font-size-xl;
+		font-weight: $font-weight-bold;
+		margin-bottom: $spacing-md;
+		color: $text-color-dark;
+	}
+
+	p {
+		margin-bottom: $spacing-lg;
+		color: $text-color-light;
+		line-height: 1.6;
+	}
+}
+
+.form-right {
+	flex: 1;
+	background-color: $background-color-dark;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@include respond-to(md) {
+		display: none;
+	}
+}
+
+form {
+	@include flex(column, flex-start, stretch);
+	gap: $spacing-md;
+
+	.form-group {
+		position: relative;
+		margin-bottom: $spacing-md;
+
+		label {
+			display: block;
+			margin-bottom: $spacing-xxs;
+			font-size: $font-size-sm;
+			color: $text-color-light;
+		}
+
+		.form-control {
+			width: 100%;
+			padding: $spacing-sm;
+			border: 1px solid $border-color;
+			border-radius: $border-radius-sm;
+			background-color: $background-color-light;
+			font-family: $font-primary;
+			font-size: $font-size-base;
+			transition: all $transition-medium;
+
+			&:focus {
+				outline: none;
+				border-color: $accent-color-2;
+				box-shadow: 0 0 0 2px rgba($accent-color-2, 0.2);
+			}
+
+			&.error {
+				border-color: $error-color;
+			}
+		}
+
+		.error-message {
+			color: $error-color;
+			font-size: $font-size-sm;
+			margin-top: $spacing-xxs;
+		}
+
+		&.with-icon {
+			position: relative;
+
+			.form-control {
+				padding-left: $spacing-xl;
+			}
+
+			.icon {
+				position: absolute;
+				left: $spacing-sm;
+				top: 50%;
+				transform: translateY(-50%);
+				color: $text-color-light;
+			}
+		}
+	}
+
+	input[type='text'],
+	input[type='tel'],
+	input[type='email'],
+	input[type='password'],
+	input[type='number'],
+	textarea,
+	select {
+		@extend .form-control;
+	}
+
+	textarea {
+		min-height: 120px;
+		resize: vertical;
+	}
+
+	.checkbox-group,
+	.radio-group {
+		@include flex(row, flex-start, center);
+		gap: $spacing-sm;
+		margin: $spacing-sm 0;
+
+		input[type='checkbox'],
+		input[type='radio'] {
+			margin: 0;
+			width: 18px;
+			height: 18px;
+			accent-color: $accent-color-1;
+		}
+
+		label {
+			margin: 0;
+			font-size: $font-size-sm;
+			cursor: pointer;
+		}
+	}
+
+	.checkbox-list,
+	.radio-list {
+		@include flex(column, flex-start, flex-start);
+		gap: $spacing-sm;
+
+		.checkbox-group,
+		.radio-group {
+			margin: 0;
+		}
+	}
+
+	.form-actions {
+		@include flex(row, space-between, center);
+		margin-top: $spacing-lg;
+
+		.button {
+			min-width: 120px;
+		}
+
+		@include respond-to(sm) {
+			flex-direction: column;
+			gap: $spacing-md;
+
+			.button {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.contact-form {
+	background-color: $secondary-color;
+	padding: $spacing-xl;
+	border-radius: $border-radius-lg;
+	box-shadow: $shadow-lg;
+
+	h3 {
+		font-size: $font-size-lg;
+		font-weight: $font-weight-bold;
+		margin-bottom: $spacing-lg;
+		color: $text-color-dark;
+		text-align: center;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: $spacing-md;
+
+		@include respond-to(sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	button[type='submit'] {
+		margin-top: $spacing-lg;
+	}
+}
+
+.form-feedback {
+	padding: $spacing-md;
+	margin-bottom: $spacing-md;
+	border-radius: $border-radius-md;
+	font-weight: $font-weight-medium;
+
+	&.success {
+		background-color: rgba($success-color, 0.1);
+		color: $success-color;
+		border-left: 3px solid $success-color;
+	}
+
+	&.error {
+		background-color: rgba($error-color, 0.1);
+		color: $error-color;
+		border-left: 3px solid $error-color;
+	}
+
+	&.warning {
+		background-color: rgba($warning-color, 0.1);
+		color: $warning-color;
+		border-left: 3px solid $warning-color;
+	}
+
+	&.info {
+		background-color: rgba($info-color, 0.1);
+		color: $info-color;
+		border-left: 3px solid $info-color;
+	}
+}
